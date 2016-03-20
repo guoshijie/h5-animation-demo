@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #block{
+            position:absolute;
+            left: 200px;
+            top: 200px;
+            width: 100px;
+            height: 100px;
+            background: #0c8;
+            line-height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="block">click me</div>
+    <script>
+        block.addEventListener('click', function(){
+            var self = this, startTime = Date.now(),
+                    T = 1000;
+            setInterval(function(){
+                var p = (Date.now() - startTime) / T;
+                self.style.transform = 'rotate(' + (360 * p) +'deg)';
+            }, 1000/60);
+        });
+    </script>
+</body>
+</html>
