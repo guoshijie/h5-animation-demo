@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>均加速运动</title>
+    <style>
+        #block{
+            position:absolute;
+            left: 50px;
+            top: 200px;
+            width: 80px;
+            height: 80px;
+            background: #0c8;
+            line-height: 80px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="block">click me</div>
+<script>
+    block.addEventListener('click', function(){
+        var self = this, startTime = Date.now(),
+                distance = 200, T = 2000;
+        requestAnimationFrame(function step(){
+            var p = Math.min(1.0, (Date.now() - startTime) / T);
+            self.style.transform = 'translateX(' + (distance * p * p) +'px)';
+            if(p < 1.0) requestAnimationFrame(step);
+        });
+    });
+</script>
+</body>
+</html>
