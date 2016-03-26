@@ -14,7 +14,6 @@ Html5前端动画原理与实现
 + v=S*p/t=S/T
 + a=0
 
-
 ##Descripton
 > h5-page-transitions : 一组超炫的页面切换效果
 
