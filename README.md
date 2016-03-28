@@ -14,7 +14,6 @@ Html5前端动画原理与实现
 + v=S*p/t=S/T
 + a=0
 
-
 ##Descripton
 > h5-page-transitions : 一组超炫的页面切换效果
 
@@ -30,3 +29,4 @@ Html5前端动画原理与实现
 
 > h5-myself-demo : 自己练习的一些小demo
 >>h5-demo-page-1.html : 仿wp后台登录错误时左右晃动某一层 
+
