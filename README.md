@@ -27,3 +27,6 @@ Html5前端动画原理与实现
 >>> 2、进度条
 
 >> demo-2-2.html : 均加速运动
+
+> h5-myself-demo : 自己练习的一些小demo
+>>h5-demo-page-1.html : 仿wp后台登录错误时左右晃动某一层 
