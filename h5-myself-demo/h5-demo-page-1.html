@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+    <title>jQuery晃动层</title>
+    <style type="text/css">
+        body { font: 12px Georgia, serif; }
+        a { text-decoration: none; }
+        #header{margin:50px auto}
+        #header p{text-align:center;font-size:16px;font-weight:bold}
+        #box{width:400px;height:200px;background-color:#ccc;text-align:center}
+    </style>
+    <script type="text/javascript" src="../common/js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
+        var box_left = 0;
+        $(document).ready(function () {
+            box_left = ($(window).width() - $('#box').width()) / 2;
+            $('#box,#footer').css({'left': box_left, 'position':'absolute'});
+        });
+        function shock()
+        {
+            for (i = 1; i < 7; i++)
+            {
+                $('#box').animate({
+                    'left': '-=15'
+                }, 3, function() {
+                    $(this).animate({
+                        'left': '+=30'
+                    }, 3, function() {
+                        $(this).animate({
+                            'left': '-=15'
+                        }, 3, function() {
+                            $(this).animate({
+                                'left': box_left
+                            }, 3, function() {
+                                // shock end
+                            });
+                        });
+                    });
+                });
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="header">
+    <p>仿wp后台登录错误时左右晃动某一层</p>
+</div>
+<div id="box"><a href="#" onclick="shock();return false;">单击我查看效果</a></div>
+</body>
+</html>
